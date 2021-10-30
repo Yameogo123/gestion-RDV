@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.PatientController">
+   <children>
+      <FontAwesomeIcon fill="RED" glyphName="SIGN_OUT" layoutX="751.0" layoutY="575.0" onMouseClicked="#handleDeconnexion" size="2.3em" wrappingWidth="34.928571701049805">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIcon>
+      <TableView fx:id="tblRdv" layoutX="77.0" layoutY="255.0" prefHeight="325.0" prefWidth="647.0">
+        <columns>
+          <TableColumn fx:id="tblType" prefWidth="166.0" text="Type" />
+          <TableColumn fx:id="tblDate" prefWidth="179.0" text="date" />
+            <TableColumn fx:id="tblLibelle" prefWidth="165.0" text="Libelle" />
+            <TableColumn fx:id="tblValidite" prefWidth="136.0" text="validité" />
+        </columns>
+      </TableView>
+      <Button layoutX="454.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleDemandeRdv" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: blue;" text="faire une demande de RDV" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Californian FB Bold" size="18.0" />
+         </font>
+      </Button>
+      <Text fx:id="txtMessage" fill="WHITE" layoutX="176.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu, ">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon fill="WHITE" glyphName="HOSPITAL_ALT" layoutX="672.0" layoutY="110.0" size="5em" />
+   </children>
+</AnchorPane>

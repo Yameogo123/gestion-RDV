@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.ConnexionController">
+   <children>
+      <Button layoutX="461.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleCreation" style="-fx-background-color: skyblue;" text="créer compte" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtLogin" alignment="CENTER" layoutX="124.0" layoutY="219.0" prefHeight="31.0" prefWidth="552.0" promptText="login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Text layoutX="213.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PAGE DE CONNEXION&#10;" textAlignment="CENTER">
+         <font>
+            <Font name="Californian FB" size="37.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Text>
+      <Text fx:id="txtMessage" fill="RED" layoutX="274.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="login ou mot de passe incorrect" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="124.0" layoutY="375.0" mnemonicParsing="false" onAction="#handleAnnuler" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: red;" text="annuler" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="490.0" layoutY="375.0" mnemonicParsing="false" onAction="#handleConnexion" prefHeight="39.0" prefWidth="186.0" style="-fx-background-color: green;" text="connexion" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="#110000" layoutX="227.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient sans compte ? Veuillez">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="txtPassword" alignment="CENTER" layoutX="124.0" layoutY="303.0" prefHeight="39.0" prefWidth="552.0" promptText="mot de passe">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>

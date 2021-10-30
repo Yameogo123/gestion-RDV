@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.PlanRdvController">
+   <children>
+      <Text fill="WHITE" layoutX="91.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Programmer de nouveau un Rendez-vous" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="date" layoutX="42.0" layoutY="109.0" prefHeight="31.0" prefWidth="225.0" promptText="date" />
+      <TextField fx:id="libelle" layoutX="43.0" layoutY="223.0" prefHeight="31.0" prefWidth="224.0" promptText="libelle" />
+      <ComboBox fx:id="cbxPatient" layoutX="333.0" layoutY="109.0" onAction="#getPatient" prefHeight="31.0" prefWidth="225.0" promptText="patient" />
+      <Button layoutX="57.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleAnnuler" prefHeight="31.0" prefWidth="160.0" style="-fx-background-color: red;" text="annuler" textFill="#fff7f7" />
+      <Button layoutX="357.0" layoutY="329.0" mnemonicParsing="false" onAction="#handlePlan" prefHeight="31.0" prefWidth="160.0" style="-fx-background-color: green;" text="planifier" textFill="WHITE" />
+      <ComboBox fx:id="cbxConsultations" layoutX="334.0" layoutY="223.0" prefHeight="31.0" prefWidth="224.0" promptText="consultation associée" />
+      <Text fx:id="txtErreur" fill="RED" layoutX="183.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez bien remplire les champs" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="43.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>

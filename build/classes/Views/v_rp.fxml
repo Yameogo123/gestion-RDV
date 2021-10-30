@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: skyblue;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="Views.RpController">
+   <children>
+      <Text fx:id="title" fill="WHITE" layoutX="252.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue dans votre space, &#10;">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblPrestation" layoutX="70.0" layoutY="272.0" onMouseClicked="#handleWindow" prefHeight="288.0" prefWidth="661.0">
+        <columns>
+          <TableColumn fx:id="tblLibelle" prefWidth="251.0" text="Libelle" />
+          <TableColumn fx:id="tblDate" prefWidth="233.0" text="Date" />
+            <TableColumn fx:id="tblPatient" prefWidth="176.0" text="Patient" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="date" layoutX="442.0" layoutY="207.0" prefHeight="43.0" prefWidth="252.0" promptText="filtrer par date" />
+      <FontAwesomeIcon fill="WHITE" glyphName="FILTER" layoutX="712.0" layoutY="239.0" onMouseClicked="#handleFiltrer" size="2em" wrappingWidth="18.678571701049805">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon fill="RED" glyphName="SIGN_OUT" layoutX="26.0" layoutY="55.0" onMouseClicked="#handleDeconnexion" size="2.5em">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon fill="WHITE" glyphName="HOSPITAL_ALT" layoutX="672.0" layoutY="106.0" size="5em" />
+      <Button layoutX="70.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleAllList" style="-fx-background-color: blue;" text="liste en entier" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.MedecinController">
+   <top>
+      <AnchorPane prefHeight="144.0" prefWidth="800.0" style="-fx-background-image: red;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIcon fx:id="openMenu" fill="WHITE" glyphName="ALIGN_JUSTIFY" layoutX="51.0" layoutY="87.0" onMouseClicked="#handleOpenMenu" size="3em">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIcon>
+            <FontAwesomeIcon fill="WHITE" glyphName="HOSPITAL_ALT" layoutX="704.0" layoutY="85.0" size="5em" textAlignment="CENTER" />
+            <Text fx:id="txt" fill="WHITE" layoutX="282.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu, " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </Text>
+            <FontAwesomeIcon fx:id="closeMenu" fill="WHITE" glyphName="CLOSE" layoutX="160.0" layoutY="86.0" onMouseClicked="#handleCloseMenu" size="3em" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIcon>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane fx:id="menu" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="-1.0" layoutY="54.0" mnemonicParsing="false" onAction="#handlePlannifier" prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: skyblue;" text="Plannifier RDV" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CALENDAR_ALT" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="1.0" layoutY="260.0" mnemonicParsing="false" onAction="#handleAffecterConst" prefHeight="41.0" prefWidth="198.0" style="-fx-background-color: skyblue;" text="constantes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="1.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleDeconnexion" prefHeight="41.0" prefWidth="196.0" style="-fx-background-color: skyblue;" text="Deconnexion" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="-1.0" layoutY="158.0" mnemonicParsing="false" onAction="#handleGetDossier" prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: skyblue;" text="Dossier médical" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="FOLDER" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="anchorView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tblRDV" layoutX="48.0" layoutY="85.0" prefHeight="267.0" prefWidth="493.0" style="-fx-background-color: skyblue;">
+              <columns>
+                <TableColumn fx:id="tblType" prefWidth="156.0" text="type" />
+                <TableColumn fx:id="tblDate" prefWidth="153.0" text="date" />
+                  <TableColumn fx:id="tblPatient" prefWidth="183.0" text="patient" />
+              </columns>
+            </TableView>
+            <FontAwesomeIcon fill="#009dff" glyphName="FILTER" layoutX="523.0" layoutY="52.0" onMouseClicked="#handleFiltrer" size="1.5em">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIcon>
+            <Button layoutX="48.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleAnnulerConsultation" prefHeight="31.0" prefWidth="277.0" style="-fx-background-color: red;" text="Annuler consultation sélectionnée" textFill="WHITE" />
+            <DatePicker fx:id="recherche" layoutX="295.0" layoutY="28.0" promptText="recherche par date" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>

@@ -13,3 +13,16 @@
   relationnelle mySQL.
 </div>
 
+<div>
+  Pour le faire fonctionner installer d'abord netbeans version 7-8 
+  Puis activer mySQL et téléverser la base de données gest_rdv.sql (située dans la racine)
+  Lancer ensuite l'application.
+</div>
+
+<div>
+  Il est possible qu'il y ait des erreurs liées à la version.
+  Si c'est le cas, une alternative serait d'installer la bonne version biensûr;
+  une autre serait d'initialiser un nouveau projet et de copier coller les entités, controller et vues.
+  Dans le pire des cas n'hésitez pas à interroger le web sur les erreurs ou contactez moi
+</div>
+

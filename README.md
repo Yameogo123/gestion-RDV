@@ -13,6 +13,8 @@
   relationnelle mySQL.
 </div><br/>
 
+<p></p>
+
 <div>
   Pour le faire fonctionner installer d'abord netbeans version 7-8 
   Puis activer mySQL et téléverser la base de données gest_rdv.sql (située dans la racine)
